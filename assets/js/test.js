@@ -1,27 +1,18 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
 
     $(".saveBtn").on("click", function () {
-        console.log();
+        var value = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+        localStorage.setItem(time, value);
+        console.log(time, value);
     })
-    // $(".saveBtn") = document.getElementbyID 
-    // todo: we need time and text area values
-    var value = $(this).siblings(".userInput").val();
-    var time = $(this).parent().attr("id");
-    var demo = $(this).siblings().attr("value")
 
-    localStorage.setItem(time, value);
-
-
-    // create a function to update time as applications runs
     function timeUpdater() {
 
         var currentTime = moment().hours();
-
         // loop through timeblocks to return the correct class
-        $('time-block').each(function () {
-            var blockHour = parseInt($(this).attr("id").split('-')[1]);
-
+        $('.time-block').each(function () {
+            var blockHour = parseInt($(this).attr("id")); // .split('-')[1] if it utilized a string containing a number
             if (blockHour < currentTime) {
                 $(this).addClass('past');
             } else if (blockHour === currentTime) {
@@ -32,26 +23,16 @@ $(document).ready(function() {
                 $(this).removeClass('present');
                 $(this).addClass('future');
             }
-
-
         })
-
     }
-
     timeUpdater();
 
-
-
-
-    // TODO Load things in from local storage
-
-    $("#hour-9 .userInput").val(localStorage.getItem("hour-9"));
-    $("#hour-10 .userInput").val(localStorage.getItem("hour-10"));
-    $("#hour-11 .userInput").val(localStorage.getItem("hour-11"));
-    $("#hour-12 .userInput").val(localStorage.getItem("hour-12"));
-    $("#hour-13 .userInput").val(localStorage.getItem("hour-13"));
-    $("#hour-14 .userInput").val(localStorage.getItem("hour-14"));
-    $("#hour-15 .userInput").val(localStorage.getItem("hour-15"));
-    $("#hour-16 .userInput").val(localStorage.getItem("hour-16"));
-
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
 });
