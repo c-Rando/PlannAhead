@@ -70,3 +70,19 @@ body {
     transition: all 0.3s ease-in-out;
   }
   
+  .hours {
+      background-color:blue ;
+      max-width: 100px;
+      max-height: 50px;
+      padding-bottom: 5px;
+  }
+
+  h5 {
+      font-size: 15px;
+      color: whitesmoke;
+  }
+
+  .activity {
+      background-color: tomato;
+      max-width: 80%;
+  }
