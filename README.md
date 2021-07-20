@@ -5,30 +5,23 @@
 ### Brief Overview
 **PlannAhead** is a SAAS product where users can review their daily schedules.
 
-The daily  range from:
-  * Dog Walkers
-  * Pet Groomers
-  * Doggy aycare
-  * Full Kennel Facilites
-Service providers get access to pet owners, use of cloud database for appointment scheduling  and service fullfillment.
+The daily schedule features:
+  * 0900 - 1700
+  * Current-time tracking
+  * Local Storage Access
+  * Responsive design
 
-## Table of contents
-  * [Description](##Description)
-  * [Installation](###Installation)
-  * [Technologies](###Technologies)
-  * [Authors](###Authors)
-  * [License](###License)
- 
-## Description: Full Stack MERN with Apollo GraphQL server
-App is Full Stack  Mongo Express...
+User information will be stored in Local Storage until it is cleared, so that the user may keep track over several sessions of use.
 
-### Installation and integeration:
-  * 3 package.json sets of dependencies
-      * server :
-        * bycrypt, express, graphql, jswonwebtoken, mongoose, nodemon
         
 
 ### Technologies
+
+```
+external javascript sheets
+external css styling sheets
+LocalStorage
+```
 
 ### Author
   * Christopher Rando
